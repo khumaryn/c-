@@ -53,7 +53,53 @@ namespace task1
             //Verilmiş yazıda rəqəm olmamasını yoxlayan proqram,
             //əgər rəqəm varsa yenidən yazının daxil edilməsini istəməlidir ta ki rəqəmsiz daxil edilənədək.
             Console.WriteLine("reqemi daxil edin");
+            string word = Console.ReadLine();
+            Double reqem = Convert.ToDouble(word);
+         
+            if (reqem/1==reqem) // reqem hissesi alinir herf  ise yox
+            {
+                Console.WriteLine("davam ede bilersiz");
+                Console.ReadLine();
+            }
+            else
+            {
+                Console.WriteLine("yeniden eded daxil edin");
+                Console.ReadLine();
+            }
             
+            
+            Console.WriteLine("ededleri daxil edin");
+            int numm =Convert.ToInt32(Console.ReadLine());
+            int numn=Convert.ToInt32(Console.ReadLine());
+            var sum = 0;
+            var count = 0;
+            for (int i = 0; numm < numn; i++)
+            {
+                if (numm % 3 == 0 && numn%7==0)
+                {
+                    count++;
+                    sum += numm;
+
+
+                }
+                else
+                {
+                    i++;    
+                }
+
+                if (count == 0)
+                {
+                    Console.WriteLine("0 bolmek olmur");
+                    Console.ReadLine();
+
+                }
+
+                else
+                {
+                    Console.WriteLine(sum / count);
+                    Console.ReadLine();
+                }
+            }
 
 
 
